@@ -512,6 +512,10 @@ span {
     display: block;
   }
 
+  .intro {
+    display: none;
+  }
+
   .intro h1 {
     font-size: 2.6rem; /* Prilagođavanje veličine fonta za manje ekrane */
     text-align: center; /* Ponovno centriranje teksta unutar h1 za manje ekrane */
@@ -585,6 +589,9 @@ span {
   .portfolio-container {
     grid-template-columns: 1fr;
   }
+  .intro {
+    display: none;
+  }
 }
 
 @media (max-width: 450px) {
@@ -594,6 +601,10 @@ span {
 
   .contact form .input-box input {
     width: 100%;
+  }
+
+  .intro {
+    display: none;
   }
 
   #menu-icon {
