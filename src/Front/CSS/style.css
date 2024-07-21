@@ -432,6 +432,49 @@ span {
   color: var(--second-bg-color);
 }
 
+.intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  text-align: center;
+}
+
+.intro.hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.intro h1 {
+  font-size: 4rem;
+  opacity: 0;
+  animation: pulse 1.5s ease-in-out infinite;
+  text-align: center;
+  margin: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
@@ -471,7 +514,7 @@ span {
 
   .intro h1 {
     font-size: 2.6rem; /* Prilagođavanje veličine fonta za manje ekrane */
-    text-align: justify; /* Ponovno centriranje teksta unutar h1 za manje ekrane */
+    text-align: center; /* Ponovno centriranje teksta unutar h1 za manje ekrane */
   }
 
   .navbar {
@@ -620,47 +663,4 @@ span {
   color: white;
   margin-right: 10px;
   line-height: 20px;
-}
-
-.intro {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
-  color: var(--main-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  opacity: 1;
-  transition: opacity 0.5s ease-out;
-  text-align: center;
-}
-
-.intro.hidden {
-  opacity: 0;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.intro h1 {
-  font-size: 4rem;
-  opacity: 0;
-  animation: pulse 1.5s ease-in-out infinite;
-  text-align: center;
-  margin: 0;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
