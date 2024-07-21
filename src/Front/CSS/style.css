@@ -472,7 +472,6 @@ span {
   .intro h1 {
     font-size: 2.6rem; /* Prilagođavanje veličine fonta za manje ekrane */
     text-align: justify; /* Ponovno centriranje teksta unutar h1 za manje ekrane */
-    line-height: 1.3;
   }
 
   .navbar {
@@ -637,6 +636,7 @@ span {
   z-index: 9999;
   opacity: 1;
   transition: opacity 0.5s ease-out;
+  text-align: center;
 }
 
 .intro.hidden {
@@ -650,6 +650,7 @@ span {
   opacity: 0;
   animation: pulse 1.5s ease-in-out infinite;
   text-align: center;
+  margin: 0;
 }
 
 @keyframes pulse {
