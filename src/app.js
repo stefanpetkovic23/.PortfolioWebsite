@@ -13,6 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "../Front")));
+app.use("/css", express.static(__dirname, "../Assets"));
+app.use("/img", express.static(__dirname, "../CSS"));
+app.use("/js", express.static(__dirname, "../JS"));
 
 // Postavi rutu za glavni HTML fajl
 app.get("/", (req, res) => {
