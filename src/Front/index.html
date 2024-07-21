@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Personal Portfolio</title>
+
+    <!-- box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="intro" id="intro">
+      <h1 class="intro-text">.Portfolio</h1>
+    </div>
+
+    <!-- header design -->
+    <header class="header">
+      <a href="#" class="logo">.Portfolio</a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div id="custom-alert" class="custom-alert" style="display: none">
+      <span class="closebtn" onclick="hideCustomAlert()">&times;</span>
+      <span id="custom-alert-message"></span>
+    </div>
+
+    <!-- home section design -->
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello , it's me</h3>
+        <h1>Stefan Petković</h1>
+        <h3>And I'm a <span class="multiple-text"></span></h3>
+        <p>
+          I am a Computer Science student passionate about crafting innovative
+          Android and backend solutions.
+        </p>
+        <div class="social-media">
+          <a
+            href="https://www.facebook.com/stefan.petkovic.98096721 "
+            target="_blank"
+            ><i class="bx bxl-facebook-circle"></i
+          ></a>
+          <a href="https://www.instagram.com/petko_s01/" target="_blank"
+            ><i class="bx bxl-instagram-alt"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/stefan-petkovic-41bba52b9/"
+            target="_blank"
+            ><i class="bx bxl-linkedin-square"></i
+          ></a>
+        </div>
+        <a
+          href="https://1drv.ms/b/c/0234541b13dc3519/EelbSTTWmTFIrf9mbk61kQcBXG7cCybUdBwOl3XAaeiuPQ?e=mJ89rD"
+          target="_blank"
+          download="CV_Stefan_Petkovic.pdf"
+          class="btn"
+          >Download CV</a
+        >
+      </div>
+      <div class="home-img">
+        <img src="Assets/Untitled design.png" alt="" />
+      </div>
+    </section>
+
+    <!-- about section design -->
+
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="Assets/porfolio-about.png" alt="" />
+      </div>
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Student</h3>
+        <p>
+          Hello! I'm a final-year student at the Faculty of Electronic
+          Engineering in Niš, with a passion for creating innovative and
+          efficient technological solutions. My expertise lies in developing
+          Android applications and designing robust backend services. I thrive
+          on learning new and exciting things and constantly seek opportunities
+          to enhance my skills. In my free time, you can find me at the gym or
+          on the basketball court, staying active and enjoying the challenge of
+          physical fitness. I believe that the discipline and teamwork I
+          cultivate in sports translate well into my professional work, where I
+          strive to deliver high-quality results and collaborate effectively
+          with my peers. As a developer, I am dedicated to building applications
+          that not only meet the needs of users but also provide a seamless and
+          enjoyable experience. I am always eager to take on new projects and
+          contribute to innovative ventures. If you're looking for a passionate
+          and driven programmer to bring your ideas to life, let's connect!
+        </p>
+        <a href="#contact" class="btn">Connect</a>
+      </div>
+    </section>
+
+    <!-- services section design -->
+
+    <section class="services" id="services">
+      <h2 class="heading">Our <span>Services</span></h2>
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bx-code-alt"></i>
+          <h3>Android development</h3>
+          <p>
+            I have a deep passion for crafting Android applications that
+            seamlessly blend creativity with functionality. From
+            conceptualization to execution, I thrive on turning ideas into
+            intuitive and impactful mobile experiences. Every line of code
+            represents an opportunity to innovate and create solutions that
+            enhance user interactions and simplify everyday tasks. Android
+            development isn't just my career path. It's a canvas where I
+            continuously refine my skills and bring ideas to life in the digital
+            realm.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="services-box">
+          <i class="bx bxs-palette"></i>
+          <h3>App design</h3>
+          <p>
+            I am deeply passionate about designing applications that
+            harmoniously blend aesthetics with user experience. From conceptual
+            sketches to pixel-perfect interfaces, I thrive on creating intuitive
+            and visually captivating designs that resonate with users. Each
+            project is an opportunity to innovate and elevate user interactions
+            through thoughtful design elements and seamless navigation.
+            Designing applications isn't just a profession for me. It's a
+            journey where I continuously push boundaries to deliver engaging and
+            memorable digital experiences.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="services-box">
+          <i class="bx bxs-data"></i>
+          <h3>Backend development</h3>
+          <p>
+            I am deeply passionate about backend development, where I transform
+            complex ideas into robust, scalable solutions that power modern
+            applications. With a meticulous approach to architecture and
+            efficiency, I enjoy building the backbone of digital ecosystems that
+            ensure seamless functionality and data integrity. From optimizing
+            databases to crafting efficient APIs, I thrive on solving intricate
+            technical challenges and enhancing performance. It's a commitment to
+            crafting reliable infrastructures that support the dynamic needs of
+            today's digital landscape.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- portfolio section design -->
+
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">Latest <span>Projects</span></h2>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img
+            src="Assets/Default_i_want_to_create_logo_for_app_which_name_is_WABAT_I_wa_3.jpg"
+            alt=""
+          />
+          <div class="portfolio-layer">
+            <h4>Android development</h4>
+            <p>Android application for buying airline tickets.</p>
+            <a href="https://github.com/stefanpetkovic23/WABAT" target="_blank"
+              ><i class="bx bx-link-alt"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img
+            src="Assets/Default_I_want_to_generate_me_logo_image_mobile_app_for_selli_0.jpg"
+            alt=""
+          />
+          <div class="portfolio-layer">
+            <h4>Android development</h4>
+            <p>Android application for real estates sales.</p>
+            <a href="https://github.com/stefanpetkovic23/RMAS" target="_blank"
+              ><i class="bx bx-link-alt"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img
+            src="Assets/Default_I_want_to_create_a_logo_for_an_app_named_FamilyConnect_0.jpg"
+            alt=""
+          />
+          <div class="portfolio-layer">
+            <h4>Android development</h4>
+            <p>
+              Android application for organizing family events, finances,
+              shopping lists.
+            </p>
+            <a href="https://github.com/stefanpetkovic23/APS" target="_blank"
+              ><i class="bx bx-link-alt"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section design -->
+
+    <service class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+      <form id="contact-form" action="#">
+        <div class="input-box">
+          <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            autocomplete="off"
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Email Adress"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="input-box">
+          <input
+            type="text"
+            id="subject"
+            placeholder="Email Subject"
+            autocomplete="off"
+          />
+        </div>
+        <textarea
+          name=""
+          id="Message"
+          cols="30"
+          rows="10"
+          placeholder="Your Message"
+        ></textarea>
+        <input type="submit" id="submit-btn" value="Send Message" class="btn" />
+      </form>
+    </service>
+
+    <!-- footer design -->
+
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 by Stefan Petković | All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-iconTop">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+      document.querySelectorAll(".contact form .input-box").forEach((box) => {
+        if (box.children.length === 1) {
+          box.classList.add("full-width");
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var readMoreLinks = document.querySelectorAll(".about .btn");
+
+        readMoreLinks.forEach(function (link) {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            var targetId = this.getAttribute("href").substring(1);
+            var targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+
+    <script>
+      var btn = document.getElementById("submit-btn");
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        console.log("hi");
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var subject = document.getElementById("subject").value;
+        var message = document.getElementById("Message").value;
+        var body =
+          "Name: " +
+          name +
+          "<br/> Email: " +
+          email +
+          "<br/> Subject: " +
+          subject +
+          "<br/> Message: " +
+          message;
+
+        console.log("Preparing to send email");
+        fetch("http://localhost:3000/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullname: name,
+            email: email,
+            subject: subject,
+            message: message,
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              showCustomAlert("Email sent successfully!", "success");
+            } else {
+              showCustomAlert("Error: Unable to send email", "error");
+            }
+            document.getElementById("contact-form").reset();
+          })
+          .catch((error) => {
+            console.error("Error sending email:", error);
+            showCustomAlert("Failed to send email", "error");
+          });
+      });
+
+      function showCustomAlert(message, type) {
+        var alertBox = document.getElementById("custom-alert");
+        var alertMessage = document.getElementById("custom-alert-message");
+
+        alertBox.classList.remove("success", "error");
+        alertBox.classList.add(type);
+        alertMessage.textContent = message;
+        alertBox.style.display = "block";
+
+        setTimeout(function () {
+          alertBox.style.display = "none";
+        }, 5000);
+      }
+
+      function hideCustomAlert() {
+        var alertBox = document.getElementById("custom-alert");
+        alertBox.style.display = "none";
+      }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var intro = document.getElementById("intro");
+        var mainContent = document.querySelector("body");
+
+        setTimeout(function () {
+          intro.classList.add("hidden");
+          mainContent.classList.remove("hidden");
+        }, 2000); // Prikaz intro sekcije 3 sekunde
+
+        // Animacija teksta u intro sekciji
+        var introText = document.querySelector(".intro-text");
+        introText.style.opacity = "0.6"; // Dodao sam direktno podešavanje opacity na 1 kako bi se tekst odmah prikazao
+        anime({
+          targets: ".intro-text",
+          translateY: [-50, 0],
+          opacity: [0, 1],
+          duration: 1000,
+          easing: "easeOutExpo",
+        });
+      });
+    </script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
