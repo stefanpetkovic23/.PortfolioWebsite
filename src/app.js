@@ -12,31 +12,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, "../Front")));
-
-app.use((req, res, next) => {
-  if (req.url.endsWith(".css")) {
-    res.type("text/css");
-  }
-  next();
-});
-
-app.get("/CSS/:style.css", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Front/CSS", req.params.filename));
-});
-
-app.get("/JS/:filename", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Front/JS", req.params.filename));
-});
-
-app.get("/Assets/:filename", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Front/Assets", req.params.filename));
-});
-
-// Postavi rutu za glavni HTML fajl
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Front/index.html"));
-});
+app.use(express.static("Front"));
+app.use("/CSS", express.static(__dirname + "Front"));
+app.use("/Assets", express.static(__dirname + "Front"));
+app.use("/JS", express.static(__dirname + "Front"));
 
 // Define a route for sending email
 app.post("/send-email", (req, res) => {
