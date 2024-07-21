@@ -2,6 +2,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,10 +12,12 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static("public"));
-app.use("/css", express.static(__dirname + "public/CSS"));
-app.use("/img", express.static(__dirname + "public/Assets"));
-app.use("/js", express.static(__dirname + "public/JS"));
+app.use(express.static(path.join(__dirname, "../Front")));
+
+// Postavi rutu za glavni HTML fajl
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../Front/index.html"));
+});
 
 // Define a route for sending email
 app.post("/send-email", (req, res) => {
