@@ -14,6 +14,13 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "../Front")));
 
+app.use((req, res, next) => {
+  if (req.url.endsWith(".css")) {
+    res.type("text/css");
+  }
+  next();
+});
+
 app.get("/CSS/:style.css", (req, res) => {
   res.sendFile(path.join(__dirname, "../Front/CSS", req.params.filename));
 });
