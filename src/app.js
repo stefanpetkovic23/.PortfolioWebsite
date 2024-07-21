@@ -11,6 +11,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(express.static("public"));
+app.use("/css", express.static(__dirname + "public/CSS"));
+app.use("/img", express.static(__dirname + "public/Assets"));
+app.use("/js", express.static(__dirname + "public/JS"));
+
 // Define a route for sending email
 app.post("/send-email", (req, res) => {
   const { fullname, email, subject, message } = req.body;
